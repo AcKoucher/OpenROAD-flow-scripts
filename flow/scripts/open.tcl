@@ -69,3 +69,21 @@ if { [env_var_equals GUI_TIMING 1] } {
     log_cmd gui::update_timing_report
   }
 }
+
+set file [open "total_negative_slack.txt" a]
+puts $file [sta::total_negative_slack]
+close $file
+
+set file [open "worst_slack.txt" a]
+puts $file [sta::worst_slack]
+close $file
+
+set file [open "hpwl.txt" a]
+puts $file [ord::hpwl]
+close $file 
+
+set time [clock seconds]
+set file_name [clock format $time -format "%Y%m%d_%H%M%S"]
+save_image "$file_name.webp"
+
+exit
