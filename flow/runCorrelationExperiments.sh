@@ -36,6 +36,8 @@ function run_from_mpl {
 
 design="gf12/ariane"
 export DESIGN_CONFIG=./designs/${design}/config.mk
+#export RTLMP_DATA_FLOW_DRIVEN=0
+#export RTLMP_TIMING_DRIVEN=1
 
 make synth
 make do-2_1_floorplan
