@@ -3,7 +3,7 @@
 touch results.txt
 
 for ((variant = 50; variant <= 500; variant = variant + 30)); do
-    local design="gf12/ariane"
+    design="gf12/ariane"
 
     mv "results.txt" "./logs/${design}/${variant}/"
     cd "./logs/${design}/${variant}/"

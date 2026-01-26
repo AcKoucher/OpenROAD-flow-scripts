@@ -3,7 +3,7 @@ import glob
 import os
 
 FIELD_PATHS = {
-    "macro_place__number_of_steps": ["macro_place__number_of_steps"],
+    "macro_place__pause_step": ["macro_place__pause_step"],
     "macro_place__wirelength": ["macro_place__wirelength"],
     "macro_place__annealer_final_cost": ["macro_place__annealer_final_cost"],
     "globalplace__timing__setup__tns": ["globalplace__timing__setup__tns"],
@@ -37,7 +37,7 @@ def process_json_file(file_path):
                 pass
             
             if value != "":
-                print(f"{value}, ", end="")
+                print(f"{label} = {value}, ", end="")
 
     except FileNotFoundError:
         print(f"Error: File not found: {file_path}")
