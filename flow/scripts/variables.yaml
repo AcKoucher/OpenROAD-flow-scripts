@@ -1174,6 +1174,14 @@ RTLMP_DATA_FLOW_DRIVEN:
   default: 1
   stages:
     - floorplan
+RTLMP_TIMING_DRIVEN:
+  description: >
+    Specifies whether the macro placer should use timing driven macro placement.
+    Timing driven works by adding a wire length optimization component for the %10
+    worst critical nets.
+  default: 0
+  stages:
+    - floorplan
 RTLMP_ARGS:
   description: >
     Overrides all other RTL macro placer arguments.

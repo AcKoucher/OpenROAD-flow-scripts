@@ -65,6 +65,10 @@ if { [find_macros] != "" } {
     append additional_rtlmp_args " -data_flow_driven"
   }
 
+  if { $::env(RTLMP_TIMING_DRIVEN) } {
+    append additional_rtlmp_args " -timing_driven"
+  }
+
   set all_args $additional_rtlmp_args
 
   if { [env_var_exists_and_non_empty RTLMP_ARGS] } {
